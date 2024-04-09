@@ -15,7 +15,7 @@ class Game {
             500 , 
             100 , 
             150 , 
-            "./images/vegeta.png") ;
+            "./images/player.png") ;
            
 
 

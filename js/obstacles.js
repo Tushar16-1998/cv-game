@@ -11,7 +11,7 @@ class Obstacle {
 
         // Create the HTML elements and create default styling
         this.element = document.createElement("img") ;
-        this.element.src = "./images/gokublack.png" ;
+        this.element.src = "./images/html.png" ;
         this.element.style.position = "absolute" ;
         this.element.style.width = `${this.width}px` ;
         this.element.style.height = `${this.height}px` ;
