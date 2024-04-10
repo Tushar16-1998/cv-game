@@ -23,9 +23,7 @@ window.onload = function () {
       const key = event.key ;
       const possibleKeys = [
         "ArrowLeft",
-        "ArrowUp" ,
         "ArrowRight" ,
-        "ArrowDown"
       ]
   
       if(possibleKeys.includes(key)) {
@@ -36,13 +34,8 @@ window.onload = function () {
             case "ArrowLeft" :
               game.player.directionX = -10 ;
               break ;
-            case "ArrowUp" :
-              game.player.directionY = -10 ;
-              break ;
             case "ArrowRight" :
               game.player.directionX = 10 ;
-            case "ArrowDown" :
-              game.player.directionY = 10 ;
           }
         }
       }
@@ -53,9 +46,7 @@ window.onload = function () {
       const key = event.key ;
       const possibleKeys = [
         "ArrowLeft",
-        "ArrowUp" ,
         "ArrowRight" ,
-        "ArrowDown"
       ]
   
       if(possibleKeys.includes(key)) {

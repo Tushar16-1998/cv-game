@@ -1,4 +1,6 @@
-class Obstacle {
+//----------------- BUG --------------------------//
+
+class Obstacle3 {
     constructor(gameScreen) {
         this.gameScreen = gameScreen ;
        
@@ -11,7 +13,7 @@ class Obstacle {
 
         // Create the HTML elements and create default styling
         this.element = document.createElement("img") ;
-        this.element.src = "./images/html.png" ;
+        this.element.src = "./images/bug.png" ;
         this.element.style.position = "absolute" ;
         this.element.style.width = `${this.width}px` ;
         this.element.style.height = `${this.height}px` ;
@@ -24,7 +26,7 @@ class Obstacle {
 
     move() {
         // Move obstacles down 
-        this.top += 4 ;
+        this.top += 3 ;
 
         this.updatePosition() ;
     }

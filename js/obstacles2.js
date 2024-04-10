@@ -1,17 +1,18 @@
-class Obstacle {
-    constructor(gameScreen) {
+class Obstacle2 {
+    constructor(gameScreen , player) {
         this.gameScreen = gameScreen ;
+        this.player = player ;
        
         // Random Position
         this.left = Math.floor(Math.random() * 300 + 70) ;
 
         this.top = 0 ;
-        this.width = 50 ;
+        this.width = 70 ;
         this.height = 50 ;
 
         // Create the HTML elements and create default styling
         this.element = document.createElement("img") ;
-        this.element.src = "./images/html.png" ;
+        this.element.src = "./images/css.png" ;
         this.element.style.position = "absolute" ;
         this.element.style.width = `${this.width}px` ;
         this.element.style.height = `${this.height}px` ;
