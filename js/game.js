@@ -10,9 +10,9 @@ class Game {
         this.player = new Player(
             this.gameScreen,
             200,
-            500,
-            80,
-            120,
+            900,
+            70,
+            100,
             "./images/player.png");
 
 
@@ -38,8 +38,8 @@ class Game {
         this.obstacles12 = []; // figma
 
         // Lives 
-
-        this.lives = 10;
+        this.score = 0 ; //
+        this.lives = 10 ;
 
         //Variable to check if im in the process of creating an obstacles.
         this.isPushingObstacle = false;
@@ -66,6 +66,8 @@ class Game {
 
         this.timerInterval = null;
 
+        this.timeLeft = 30 ;
+
     }
 
     start() {
@@ -83,8 +85,19 @@ class Game {
         this.gameScreen.style.display = "block";
 
         this.soundtrack = document.getElementById("soundtrack");
+        this.soundtrack.play() ;
 
-        //this.soundtrack.play() ;
+//----------- Timer ------------//
+
+        this.timerInterval = setInterval(() => {
+            this.timeLeft -= 1 ;
+            document.getElementById("timeRemaining").innerText = `Remaining time: ${this.timeLeft}`;
+            
+            if (this.timeLeft <= 0) {
+                clearInterval() ;
+                this.endGame();   
+            }
+        }, 1000)
 
         // Starts the game loop 
 
@@ -175,6 +188,7 @@ class Game {
 
                 this.obstacles.splice(i, 1);
 
+                this.score++ ;
 
                 const htmlText = document.createElement('div');
                 htmlText.textContent = 'HTML';
@@ -656,7 +670,7 @@ class Game {
                 this.obstacles12.splice(i, 1);
 
                 const htmlText = document.createElement('div');
-                htmlText.textContent = 'Python';
+                htmlText.textContent = 'Figma';
                 htmlText.style.position = 'absolute';
                 htmlText.style.top = '83px'; // Adjust as needed
                 htmlText.style.left = '65%'; // Center horizontally
@@ -691,12 +705,17 @@ class Game {
             }, 6500);
         }
 
+        score.innerHTML = this.score ;
+        lives.innerHTML = this.lives ;
+
     }
 
     endGame() {
         //Change the gameIsOver status. if its true, remmember that -->
         // -->this is going to break the animation loop
         this.gameIsOver = true;
+
+        clearInterval(this.timerInterval)
 
         // Remove my Player from the HTML
         this.player.element.remove();
@@ -705,8 +724,11 @@ class Game {
         this.obstacles.forEach((obstacle, index) => {
             this.obstacles.splice(index, 1);
             obstacle.element.remove();
-        });
 
+            
+        });
+        
+        this.soundtrack.pause();
         // Hide the current game screen
         this.gameScreen.style.display = "none";
 

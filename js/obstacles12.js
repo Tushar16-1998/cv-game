@@ -7,7 +7,7 @@ class Obstacle12 {
         this.left = Math.floor(Math.random() * 300 + 70) ;
 
         this.top = 0 ;
-        this.width = 50 ;
+        this.width = 30 ;
         this.height = 50 ;
 
         // Create the HTML elements and create default styling

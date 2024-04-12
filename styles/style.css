@@ -2,6 +2,15 @@ body {
     padding: 0;
     text-align: center;
   }
+
+  .game-body {
+    background-image: url(../images/background6.png);
+    background-size: cover ;
+    color: goldenrod ;
+    padding: 100px 0px;
+    margin: auto; 
+    align-content: center;
+  }
   
   #game-intro {
     padding: 20px 0px;
@@ -10,10 +19,18 @@ body {
   #game-container {
     display: flex;
     width: 100vw;
-    padding: 20px 0px;
     justify-content: center;
   }
-  
+
+  #stats-container {
+    background-color: purple ;
+    border: 5px solid goldenrod;
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 20px 0px;
+  }
+    
   #game-screen {
     display: none;
     align-content: center;
@@ -22,6 +39,8 @@ body {
     position: relative;
     background-image: url(../images/background.png);
     background-size: cover;
+    border: 5px solid ;
+    border-radius: 10px;
   }
   
   @keyframes slide {
@@ -64,3 +83,32 @@ body {
     margin-bottom: 20px;
   }
   
+  #start-message{
+    font-size: xx-large;
+  }
+
+  #start-button{
+    font-size: xx-large;
+    color : white ;
+    border: 5px solid goldenrod ;
+    background-color: purple;
+    border-radius: 50px ;
+  }
+
+  #restart-button{
+    font-size: xx-large;
+    color : white ;
+    border: 5px solid goldenrod ;
+    background-color: purple;
+    border-radius: 50px;
+  }
+
+  #start-message{
+    font-size: xx-large;
+    border: 5px solid goldenrod ;
+    background-color: purple;
+    border-radius: 15px ;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 10px;
+  }

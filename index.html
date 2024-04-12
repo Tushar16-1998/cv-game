@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>My Skill</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css" />
+  <title>My Skill</title>
 </head>
+
 <body>
-    <main>
-        <!-- #game-intro is initially shown on the game start screen -->`      <div id="game-intro">
-          <img src="./images/logo.png" alt="" class="logo-img" />
-          <br />
-          <button id="start-button">My Skills</button>
+  <main>
+    <div class="game-body">
+      <!-- #game-intro is initially shown on the game start screen -->` <div id="game-intro">
+        <img src="./images/logo.png" alt="" class="logo-img" />
+        <br />
+        <p id="start-message"> Now use arrows keep to catch my skills and beware of bug </p>
+        <br />
+        <button id="start-button">My Skills</button>
+        <br />
+
+      </div>
+
+      <div id="game-container">
+        <div id="stats-container">
+          <h2> Stats </h2>
+          <p> Score: <span id="score">0</span> </p>
+          <p> Lives: <span id="lives">10</span> </p>
+          <div id="timeRemaining">Remaining Time: <span>00</span></div>
         </div>
-  
-        <div id="game-container">
-          <div>
-            
-          </div>
-          <!-- #game-screen is initially hidden using CSS style display: none -->
-          <div id="game-screen"></div>
-        </div>
-  
+        <!-- #game-screen is initially hidden using CSS style display: none -->
+        <div id="game-screen"></div>
         <audio id="soundtrack" src="./sound/rydeen.mp3"></audio>
-  
-        <!-- #game-end is initially hidden using CSS style display: none -->
-        <div id="game-end">
-          <img src="./images/logo.png" alt="" class="logo-img" />
-          <h1>Game Over</h1>
-          <br />
-          <button id="restart-button">Restart</button>
-        </div>
-      </main>
-  
-      <script type="text/javascript" src="js/obstacles.js"></script>
-      <script type="text/javascript" src="js/obstacles2.js"></script>
-      <script type="text/javascript" src="js/obstacles3.js"></script>
-      <script type="text/javascript" src="js/obstacles4.js"></script>
-      <script type="text/javascript" src="js/obstacles5.js"></script>
-      <script type="text/javascript" src="js/obstacles6.js"></script>
-      <script type="text/javascript" src="js/obstacles7.js"></script>
-      <script type="text/javascript" src="js/obstacles8.js"></script>
-      <script type="text/javascript" src="js/obstacles9.js"></script>
-      <script type="text/javascript" src="js/obstacles10.js"></script>
-      <script type="text/javascript" src="js/obstacles11.js"></script>
-      <script type="text/javascript" src="js/obstacles12.js"></script>
-      <script type="text/javascript" src="js/player.js"></script>
-      <script type="text/javascript" src="js/game.js"></script>
-      <script type="text/javascript" src="js/script.js"></script>
+      </div>
+
+
+      <!-- #game-end is initially hidden using CSS style display: none -->
+      <div id="game-end">
+        <img src="./images/logo.png" alt="" class="logo-img" />
+        <h1>Game Over</h1>
+        <br />
+        <button id="restart-button">Restart</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="js/obstacles.js"></script>
+  <script type="text/javascript" src="js/obstacles2.js"></script>
+  <script type="text/javascript" src="js/obstacles3.js"></script>
+  <script type="text/javascript" src="js/obstacles4.js"></script>
+  <script type="text/javascript" src="js/obstacles5.js"></script>
+  <script type="text/javascript" src="js/obstacles6.js"></script>
+  <script type="text/javascript" src="js/obstacles7.js"></script>
+  <script type="text/javascript" src="js/obstacles8.js"></script>
+  <script type="text/javascript" src="js/obstacles9.js"></script>
+  <script type="text/javascript" src="js/obstacles10.js"></script>
+  <script type="text/javascript" src="js/obstacles11.js"></script>
+  <script type="text/javascript" src="js/obstacles12.js"></script>
+  <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>
