@@ -10,6 +10,7 @@ body {
     padding: 100px 0px;
     margin: auto; 
     align-content: center;
+    align-items: center;
   }
   
   #game-intro {
@@ -18,7 +19,6 @@ body {
   
   #game-container {
     display: flex;
-    width: 100vw;
     justify-content: center;
   }
 
@@ -26,9 +26,11 @@ body {
     background-color: purple ;
     border: 5px solid goldenrod;
     border-radius: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 50px;
+    padding-left: 55px;
     margin-top: 20px 0px;
+    margin-bottom: 20px 0px;
+    
   }
     
   #game-screen {
