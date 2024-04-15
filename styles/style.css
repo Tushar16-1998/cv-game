@@ -1,119 +1,127 @@
 body {
-    padding: 0;
-    text-align: center;
+  padding: 0;
+  text-align: center;
+}
+
+.game-body {
+  background-image: url(../images/background6.png);
+  background-size: cover;
+  color: goldenrod;
+  padding: 100px 0px;
+  margin: auto;
+  align-content: center;
+  align-items: center;
+}
+
+#game-intro {
+  padding: 20px 0px;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 0px 0px;  
+}
+
+#stats-container {
+  background-color: purple;
+  border: 5px solid goldenrod;
+  border-radius: 10px;
+  padding-right: 50px;
+  padding-left: 55px;
+  margin-top: 20px 0px;
+  margin-bottom: 20px 0px;
+
+}
+
+#game-screen {
+  display: none;
+  align-content: center;
+  padding: 20px 0px;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  border: 5px solid;
+  border-radius: 10px;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0 -1000px;
   }
 
-  .game-body {
-    background-image: url(../images/background6.png);
-    background-size: cover ;
-    color: goldenrod ;
-    padding: 100px 0px;
-    margin: auto; 
-    align-content: center;
-    align-items: center;
-  }
-  
-  #game-intro {
-    padding: 20px 0px;
-  }
-  
-  #game-container {
-    display: flex;
-    justify-content: center;
+  95% {
+    background-position: 0 0;
   }
 
-  #stats-container {
-    background-color: purple ;
-    border: 5px solid goldenrod;
-    border-radius: 10px;
-    padding-right: 50px;
-    padding-left: 55px;
-    margin-top: 20px 0px;
-    margin-bottom: 20px 0px;
-    
+  100% {
+    background-position: 0 50px;
   }
-    
-  #game-screen {
-    display: none;
-    align-content: center;
-    padding: 20px 0px;
-    overflow: hidden;
-    position: relative;
-    background-image: url(../images/background.png);
-    background-size: cover;
-    border: 5px solid ;
-    border-radius: 10px;
-  }
-  
-  @keyframes slide {
-    0% {
-      background-position: 0 -1000px;
-    }
-    95% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 0 50px;
-    }
-  }
-  
-  #game-end {
-    display: none;
-  }
-  
-  .game-intro p {
-    font-size: 18px;
-    font-family: "Verdana";
-  }
-  
-  .logo-img {
-    width: 350px;
-  }
-  
-  .arrows-img {
-    width: 150px;
-  }
-  
-  body button {
-    font-size: 30px;
-    background-color: #870007;
-    color: #fff;
-    padding: 20px 40px;
-    border: 0;
-    box-shadow: 0;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  #start-message{
-    font-size: xx-large;
-  }
+}
 
-  #start-button{
-    font-size: xx-large;
-    color : white ;
-    border: 5px solid goldenrod ;
-    background-color: purple;
-    border-radius: 50px ;
-  }
+#game-end {
+  display: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
 
-  #restart-button{
-    font-size: xx-large;
-    color : white ;
-    border: 5px solid goldenrod ;
-    background-color: purple;
-    border-radius: 50px;
-  }
+.game-intro p {
+  font-size: 18px;
+  font-family: "Verdana";
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
 
-  #start-message{
-    font-size: xx-large;
-    border: 5px solid goldenrod ;
-    background-color: purple;
-    border-radius: 15px ;
-    margin-left: 500px;
-    margin-right: 500px;
-    padding: 10px;
-  }
+.logo-img {
+  width: 350px;
+}
 
+.arrows-img {
+  width: 150px;
+}
 
-  
+body button {
+  font-size: 30px;
+  background-color: #870007;
+  color: #fff;
+  padding: 20px 40px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#start-message {
+  font-size: xx-large;
+}
+
+#start-button {
+  font-size: xx-large;
+  color: white;
+  border: 5px solid goldenrod;
+  background-color: purple;
+  border-radius: 50px;
+}
+
+#restart-button {
+  font-size: xx-large;
+  color: white;
+  border: 5px solid goldenrod;
+  background-color: purple;
+  border-radius: 50px;
+}
+
+#start-message {
+  font-size: xx-large;
+  border: 5px solid goldenrod;
+  background-color: purple;
+  border-radius: 15px;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding: 10px;
+}
+
