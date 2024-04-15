@@ -38,8 +38,8 @@ class Game {
         this.obstacles12 = []; // figma
 
         // Lives 
-        this.score = 0 ; //
-        this.lives = 10 ;
+        this.score = 0; //
+        this.lives = 10;
 
         //Variable to check if im in the process of creating an obstacles.
         this.isPushingObstacle = false;
@@ -66,18 +66,11 @@ class Game {
 
         this.timerInterval = null;
 
-        this.timeLeft = 30 ;
+        this.timeLeft = 30;
 
     }
 
     start() {
-
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-    
-        this.gameScreen.style.width = screenWidth + "px";
-        this.gameScreen.style.height = screenHeight + "px";
-
         // Sets the height and width of the game screen.||||||||||
 
         this.gameScreen.style.height = `${this.height}px`;
@@ -92,17 +85,17 @@ class Game {
         this.gameScreen.style.display = "block";
 
         this.soundtrack = document.getElementById("soundtrack");
-        this.soundtrack.play() ;
+        this.soundtrack.play();
 
-//----------- Timer ------------//
+        //----------- Timer ------------//
 
         this.timerInterval = setInterval(() => {
-            this.timeLeft -= 1 ;
+            this.timeLeft -= 1;
             document.getElementById("timeRemaining").innerText = `Remaining time: ${this.timeLeft}`;
-            
+
             if (this.timeLeft <= 0) {
-                clearInterval() ;
-                this.endGame();   
+                clearInterval();
+                this.endGame();
             }
         }, 1000)
 
@@ -195,7 +188,7 @@ class Game {
 
                 this.obstacles.splice(i, 1);
 
-                this.score++ ;
+                this.score++;
 
                 const htmlText = document.createElement('div');
                 htmlText.textContent = 'HTML';
@@ -712,8 +705,8 @@ class Game {
             }, 6500);
         }
 
-        score.innerHTML = this.score ;
-        lives.innerHTML = this.lives ;
+        score.innerHTML = this.score;
+        lives.innerHTML = this.lives;
 
     }
 
@@ -732,9 +725,9 @@ class Game {
             this.obstacles.splice(index, 1);
             obstacle.element.remove();
 
-            
+
         });
-        
+
         this.soundtrack.pause();
         // Hide the current game screen
         this.gameScreen.style.display = "none";
