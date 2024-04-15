@@ -20,8 +20,6 @@ body {
 #game-container {
   display: flex;
   justify-content: center;
-  width: 100vw;
-  padding: 0px 0px;  
 }
 
 #stats-container {
@@ -125,3 +123,26 @@ body button {
   padding: 10px;
 }
 
+/* for mobile devices */
+
+@media (max-width: 768px) {
+  .logo-img {
+    width: 250px;
+  }
+
+  .arrows-img {
+    width: 100px;
+  }
+
+  body button {
+    font-size: 20px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+  }
+
+  #start-message,
+  #start-button,
+  #restart-button {
+    font-size: large;
+  }
+}
