@@ -86,17 +86,12 @@ window.onload = function () {
       const touchX = event.touches[0].clientX;
       const screenWidth = window.innerWidth;
 
-      if (touchX < screenWidth / 3) {
-        // Left third of the screen
-        game.player.directionX = -6.5;
-        game.player.directionY = -4;
-      } else if (touchX < (2 * screenWidth) / 3) {
-        // Middle third of the screen
-        game.player.directionY = -10;
+      if (touchX < screenWidth / 2) {
+        // Touch on the left half of the screen
+        game.player.directionX = -6.5; // Move left
       } else {
-        // Right third of the screen
-        game.player.directionX = 6.5;
-        game.player.directionY = -4;
+        // Touch on the right half of the screen
+        game.player.directionX = 6.5; // Move right
       }
     }
     if (game && game.gameIsOver) {
@@ -106,9 +101,7 @@ window.onload = function () {
 
   function handleTouchEnd() {
     if (game) {
-      setTimeout(() => {
-        game.player.directionX = 0;
-      }, 200);
+      game.player.directionX = 0; // Stop horizontal movement
     }
   }
 
