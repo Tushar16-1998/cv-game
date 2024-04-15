@@ -71,6 +71,13 @@ class Game {
     }
 
     start() {
+
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+    
+        this.gameScreen.style.width = screenWidth + "px";
+        this.gameScreen.style.height = screenHeight + "px";
+
         // Sets the height and width of the game screen.||||||||||
 
         this.gameScreen.style.height = `${this.height}px`;
