@@ -125,24 +125,23 @@ body button {
 
 /* for mobile devices */
 
-@media (max-width: 768px) {
-  .logo-img {
-    width: 250px;
+@media only screen and (max-width: 600px) {
+  .game-intro p {
+    font-size: 14px;
   }
-
+  .logo-img {
+    width: 200px;
+  }
   .arrows-img {
     width: 100px;
   }
-
-  body button {
-    font-size: 20px;
-    padding: 15px 30px;
-    margin-bottom: 15px;
+  #start-message {
+    font-size: x-large;
   }
-
-  #start-message,
-  #start-button,
+  #start-button {
+    font-size: x-large;
+  }
   #restart-button {
-    font-size: large;
+    font-size: x-large;
   }
 }
