@@ -19,8 +19,16 @@ class Game {
 
         // Style for the board game.
 
-        this.height = 600;
-        this.width = 500;
+        // this.height = 600;
+        // this.width = 500;
+
+        this.height = window.innerHeight;
+        if (window.innerWidth < 550) {
+            // If so, set this.width to window.innerWidth
+            this.width = window.innerWidth;
+        } else {
+            this.width = 550
+        }
 
         // Obstacles
 
